@@ -1,0 +1,97 @@
+body{
+	background-color:#fbf7f5;
+}
+.numbers{
+	width:20%;
+	height:100px;
+	background-color:white;
+	font-size:20px;
+	border:black 2px solid;
+	margin-bottom:5px;
+
+}
+.numberpad{
+	margin-left:13%;
+	
+	margin-top:20px;
+		}
+	
+.purchaselist{
+border: solid grey 1px;
+background-color:white;
+
+height:250px;
+padding-top:50px;
+
+list-style:none;
+}
+.display{
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+
+
+}
+.cashandtender{
+	margin-top:0px;
+	margin-left:10%;
+	display:flex;
+	flex-direction:column;
+	width:90%;
+
+
+
+}
+.textbox{
+	margin-bottom:20px;
+	width:50%;
+	height:50px;
+	margin-left:20%;
+}
+.tenderbox{
+	margin-bottom:20px;
+	margin-left:29%;
+	height:50px;
+	margin-top:20px;	
+	
+
+}
+.itemdisplay{
+	display:flex;
+	flex-direction:column;
+	margin-right:2%;
+	
+
+}
+.tender{
+	
+	width:50%;
+	height:100px;
+	margin-right:20%;
+	background-color:blue;
+}
+.cash
+{margin-top:20px;
+width:50%;
+height:100px;
+margin-right:20%;
+background-color:green;}
+.change{
+	margin:30px 20% 0px 0px;
+	height:100px;
+	font-size:60px;
+	align-self: center;
+	width:70%;
+	text-align:center;
+	padding-top:20px;
+}
+.actionbutton{
+		align-self: center;
+		color:white;
+}
+.changes{
+	border: 1px solid black;
+	width:50%;
+	padding-bottom:150px;
+	margin-left:10%;
+}
