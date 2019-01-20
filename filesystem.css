@@ -1,6 +1,11 @@
 body{
 	background-color:#fbf7f5;
 }
+button{
+	background-color:white;
+
+
+}
 .navigation{
 	background-color:#add8e6;
 	padding:1% 0 1% 0;
@@ -22,9 +27,11 @@ body{
 	background-color:white;
 	font-size:20px;
 	border:black 2px solid;
+	border-radius:15%;
 	
 
 }
+
 .numberpad{
 	margin-left:13%;
 	
@@ -63,6 +70,7 @@ list-style:none;
 	background-color:white;
 	font-size:15px;
 	border:black 2px solid;
+		border-radius:15%;
 
 }
 .cashandtender{
@@ -95,6 +103,14 @@ list-style:none;
 	margin-right:2%;
 	
 
+}
+.nan{
+	height:60%;
+
+	background-color:white;
+	font-size:20px;
+	border:black 2px solid;
+	border-radius:15%;
 }
 .tender{
 	
@@ -146,6 +162,7 @@ margin-bottom:2%;}
 	border:black 2px solid;
 	width:100%;
 	margin-left:1%;
+		border-radius:15%;
 }
 .wholeMilk{
 	background-color:blue;
