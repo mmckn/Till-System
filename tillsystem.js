@@ -1,10 +1,3 @@
-// recieve prices
-//store in an array//
-//add prices
-//recieve payment
-//subtract prices from payment
-//return change
-//determine change coins/notes use remainder?
 tenderclicked = false;
 var one = document.querySelectorAll(".numbers");
 one.forEach(function(button){button.addEventListener("click", function(){
@@ -125,22 +118,46 @@ function changeList(x){
 	}
 
 
+var search = document.querySelector(".search");
+search.addEventListener("click", function(){
+
+
+	for (var x = 0; x<items.length;x++){
+		if (items[x]["barcode"] == document.querySelector(".tenderbox").innerHTML){
+			prices(items[x]["price"]);
+	itemList();
+	document.querySelector(".tenderbox").innerHTML ="";
+	return;
+
+		}
+		else {document.querySelector(".tenderbox").innerHTML ="";
+		document.querySelector(".change").innerHTML = "Barcode not recognised";
+	}
+	}
+})
+
+
+
+
+
+
 
 
 var commonItems = document.querySelectorAll(".commonItems");
 
 console.log(commonItems);
-	commonItems.forEach(function(item){
-item.addEventListener("click", function(){
+	commonItems.forEach(function(ele){
+ele.addEventListener("click", function(){
 
-var searchItem = item.innerHTML;
+var searchItem = ele.innerHTML;
 console.log(searchItem);
-for(var i = 0; i < commonItems.length; i++){
-if (commonItems[i]["item"] == searchItem){
-	console.log(commonItems[i]["price"])
+for(var i = 0; i < items.length; i++){
+if (items[i]["item"] == searchItem){
+	console.log(items[i]["price"])
 
-	prices(commonItems[i]["price"]);
+	prices(items[i]["price"]);
 	itemList();
+	return
 }
 else{console.log("nomatch")}
 }
@@ -148,46 +165,49 @@ else{console.log("nomatch")}
 })
 
 	})
+
+
+
 	
 	
 
 
-var commonItems = [
+var items = [
 {
 	"item": "Croissant",
-	barcode: 101010101,
+	barcode: 101,
 	"price": 0.89
 },
 {
 	"item": "Large Cappucino/Latte",
-	barcode: 101010101,
+	barcode: 1010101012,
 	"price": 2.19
 },
 {
 	"item": "Large Americano",
-	barcode: 101010101,
+	barcode: 1010101013,
 	"price": 2.19
 },
 {
 	"item": "Medium Americano",
-	barcode: 101010101,
+	barcode: 1010101014,
 	"price": 1.99
 },
 {
 	"item": "Medium Cappucino/Latte",
-	barcode: 101010101,
+	barcode: 1010101015,
 	"price": 1.99
 },
 {
 	"item": "bread",
-	barcode: 101010101,
+	barcode: 1010101016,
 	"price": 1.09
 },
 
 
 {
 	"item":"milk",
-	barcode:202020202,
+	barcode:2020202027,
 	price: 1.10,
 }
 
@@ -195,3 +215,24 @@ var commonItems = [
 
 
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
