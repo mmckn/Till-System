@@ -85,7 +85,12 @@ function calculateChange(){
 	parseInt(payment);
 	change = (payment * 100 - tenderedtotal[0] * 100) /100;
 	changeRounded= change
-	changeDisplay.innerHTML = "$" + changeRounded;
+	if (change < 0){
+		changeDisplay.innerHTML = "Insufficient Funds!";
+
+	}
+	else{
+	changeDisplay.innerHTML = "$" + changeRounded;}
 	//var total = payment - number;
 		
 }
@@ -118,5 +123,75 @@ function changeList(x){
 		changes.appendChild(changelist);
 
 	}
-//map array if an item divides into the total then push it the number of times it divides into a new array then show this array
-//NESTED FOR EACH
+
+
+
+
+var commonItems = document.querySelectorAll(".commonItems");
+
+console.log(commonItems);
+	commonItems.forEach(function(item){
+item.addEventListener("click", function(){
+
+var searchItem = item.innerHTML;
+console.log(searchItem);
+for(var i = 0; i < commonItems.length; i++){
+if (commonItems[i]["item"] == searchItem){
+	console.log(commonItems[i]["price"])
+
+	prices(commonItems[i]["price"]);
+	itemList();
+}
+else{console.log("nomatch")}
+}
+
+})
+
+	})
+	
+	
+
+
+var commonItems = [
+{
+	"item": "Croissant",
+	barcode: 101010101,
+	"price": 0.89
+},
+{
+	"item": "Large Cappucino/Latte",
+	barcode: 101010101,
+	"price": 2.19
+},
+{
+	"item": "Large Americano",
+	barcode: 101010101,
+	"price": 2.19
+},
+{
+	"item": "Medium Americano",
+	barcode: 101010101,
+	"price": 1.99
+},
+{
+	"item": "Medium Cappucino/Latte",
+	barcode: 101010101,
+	"price": 1.99
+},
+{
+	"item": "bread",
+	barcode: 101010101,
+	"price": 1.09
+},
+
+
+{
+	"item":"milk",
+	barcode:202020202,
+	price: 1.10,
+}
+
+
+
+
+]
